@@ -17,18 +17,23 @@ jobs:
       steps:
         - name: Checkout repository
           uses: actions/checkout@v2
+          working-directory: ../../worksheet2
 
         - name: Set up Node.js ${{ matrix.node-version }}
           uses: actions/setup-node@v1
           with:
             node-version: ${{ matrix.node-version }}
+          working-directory: ../../worksheet2
 
         - name: Install dependencies
           run: npm install
+          working-directory: ../../worksheet2
 
         - name: Run the tests
           run: npm test
+          working-directory: ../../worksheet2
 
         - name: Build
           run: npm run build
+          working-directory: ../../worksheet2
         
