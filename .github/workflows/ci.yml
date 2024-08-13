@@ -25,7 +25,7 @@ jobs:
 
         - name: Install dependencies
           run: npm install
-          working-directory: ../../worksheet2
+          working-directory: ../worksheet2
 
         - name: Run the tests
           run: npm test
